@@ -58,6 +58,8 @@
     missing_debug_implementations
 )]
 #![allow(clippy::missing_panics_doc)]
+#![allow(clippy::module_name_repetitions)]
+#![allow(non_local_definitions)]
 
 pub use accessor;
 pub use extended_capabilities::ExtendedCapability;

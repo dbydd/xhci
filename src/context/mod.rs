@@ -71,7 +71,8 @@ pub struct Input<const N: usize> {
 }
 impl_constructor!(Input, "Input");
 impl<const N: usize> Input<N> {
-    const fn new() -> Self {
+    ///create new input
+    pub const fn new() -> Self {
         Self {
             control: InputControl::new(),
             device: Device::new(),
@@ -264,7 +265,8 @@ pub struct Device<const N: usize> {
 }
 impl_constructor!(Device, "Device");
 impl<const N: usize> Device<N> {
-    const fn new() -> Self {
+    ///create new context
+    pub const fn new() -> Self {
         Self {
             slot: Slot::new(),
             endpoints: [Endpoint::new(); NUM_OF_ENDPOINT_CONTEXTS],
